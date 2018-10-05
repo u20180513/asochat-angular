@@ -1,0 +1,25 @@
+<div class="container">
+  <form #login="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="login-id" >ID:</label><br/>
+      <input required class="" type="text" 
+            id="login-id" 
+            name="user-id"
+            placeholder="ユーザー名"
+            maxlength="200"
+            [(ngModel)]="user.id"/>
+    </div>
+    <div class="form-group">
+      <label for="login-pwd" >Password:</label><br/>
+      <input required class="" type="text" 
+            id="login-pwd" 
+            name="user-pwd"
+            placeholder="パスワード（8文字以上）"
+            minlength="8"
+            maxlength="200"
+            [(ngModel)]="user.password" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+  
