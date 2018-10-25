@@ -1,0 +1,14 @@
+
+        {{openroom.RoomName}}
+        {{openroom.genre}}
+
+        <li *ngFor="let room of openrooms">
+          {{room.RoomName}}
+          {{room.genre}}
+          {{room.member}}
+          {{room.host}}
+        </li>
+
+        <button routerLink="/top">name</button>
+        <button routerLink="/questionlist">遷移</button>
+        <a [routerLink]="[ questionlist, routeParam ]">name</a>
