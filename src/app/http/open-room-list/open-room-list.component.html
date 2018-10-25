@@ -1,0 +1,14 @@
+<div class="container">
+  <meta charset="utf-8">
+<ul>
+  <li><button routerLink="/top">戻る</button></li>
+
+  <li *ngFor="let oroom of openroomlist">
+    {{oroom.RoomName}}
+    {{oroom.genre}}
+    {{oroom.member}}
+    {{oroom.host}}
+  </li>
+
+</ul>
+</div>
