@@ -1,0 +1,13 @@
+<div class="container">
+  <form #nameRegist="" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="">ニックネーム</label>
+      <input required class="" type="text"
+             id="asost_name" 
+             name="asost_name" 
+             placeholder="ニックネームを入力してください。" 
+             maxlength="40"
+             [(ngModel)]="asost_name">
+    </div>
+  </form>
+</div>
