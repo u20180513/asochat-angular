@@ -1,13 +1,17 @@
+<app-header></app-header>
 <div class="container">
-  <form #nameRegist="" (ngSubmit)="onSubmit()">
+  {{checkData()}}
+  <form #nameRegist="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="">ニックネーム</label>
+      <label for="name">ニックネーム</label>
       <input required class="" type="text"
-             id="asost_name" 
-             name="asost_name" 
+             id="name" 
+             name="name" 
              placeholder="ニックネームを入力してください。" 
+             minlength="2"
              maxlength="40"
-             [(ngModel)]="asost_name">
+             [(ngModel)]="handlename">
     </div>
+    <button type="submit">登録</button>
   </form>
 </div>

@@ -10,8 +10,9 @@ export class AuthService {
     ) { }
 
     userAuth() {
-        const user: User = JSON.parse(localStorage.getItem('signed_user'));
+        let result: boolean;
+        result = !isNull(localStorage.getItem('signed_user'));
 
-        return isNull(user); // user.getState();
+        return result;
     }
 }

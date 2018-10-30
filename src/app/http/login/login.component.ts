@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { User } from '../../model/user';
 import { UserService } from 'src/app/services/user.service';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined, isNull } from 'util';
 // https://qiita.com/ksh-fthr/items/e43dd37bff2e51e95a59
 import { Router } from '@angular/router';
 
@@ -11,8 +11,7 @@ import { Router } from '@angular/router';
   styles: ['input { width: 100%; } ']
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  submitted = false;
-  user: User = new User(0, 0, '', '', false);
+  user: User = new User();
 
   constructor(
     private service: UserService,
@@ -20,17 +19,22 @@ export class LoginComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    const user: User = JSON.parse(localStorage.getItem('signed_user'));
-    if (user.getState()) {
-      this.router.navigate(['rooms']);
-      console.log('is logined.');
-    }
   }
 
   ngOnDestroy() {
   }
 
   onSubmit() {
-    this.service.login(this.user);
+    // console.log(JSON.stringify(this.user));
+    if (this.user.num.toString.length === 10) {
+      if (this.user.password.length >= 8
+          && this.user.password.length <= 200) {
+          this.service.login(this.user);
+      }
+    }
+  }
+
+  checkData() {
+    return JSON.stringify(this.user);
   }
 }

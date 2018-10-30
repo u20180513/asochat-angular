@@ -1,9 +1,10 @@
 export class User {
-    private id: number;
-    private num: number;
-    private name: string;
-    private password: string;
-    private state: boolean;
+    id: number;
+    num: number;
+    name: string;
+    password: string;
+    state: boolean;
+    is_first_login: boolean; // 初ログインの確認用
 
     constructor(
         id?: number,
@@ -11,21 +12,7 @@ export class User {
         name?: string,
         password?: string,
         state?: boolean,
+        is_first_login?: boolean,
     ) {
-    }
-
-    public setName(name: string) {
-        this.name = name;
-    }
-
-    public getState() {
-        return this.state;
-    }
-    public setState(state: boolean) {
-        this.state = state;
-    }
-
-    public setPassword(password: string) {
-        this.password = password;
     }
 }

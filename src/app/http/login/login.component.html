@@ -1,17 +1,19 @@
 <div class="container">
-  <form #login="ngForm" (ngSubmit)="onSubmit()">
+  {{ checkData() }}
+  <form #login="ngForm" (ngSubmit)="onSubmit(user)">
     <div class="form-group">
       <label for="login-id" >学籍番号</label>
-      <input required class="" type="text" 
+      <input required class="form-control" type="text" 
             id="login-id" 
             name="user-id"
             placeholder="あなたの学籍番号を入力してください。"
-            maxlength="200"
-            [(ngModel)]="user.id"/>
+            minlength="10"
+            maxlength="10"
+            [(ngModel)]="user.num"/>
     </div>
     <div class="form-group">
       <label for="login-pwd" >パスワード</label>
-      <input required class="" type="text" 
+      <input required class="form-control" type="text" 
             id="login-pwd" 
             name="user-pwd"
             placeholder="パスワード（8文字以上）"

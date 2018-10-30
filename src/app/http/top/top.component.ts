@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { User } from '../../model/user';
 
 @Component({
   selector: 'app-top',
-  template: '<app-login></app-login>',
+  templateUrl: 'top.component.html',
 })
 export class TopComponent implements OnInit {
   constructor(
