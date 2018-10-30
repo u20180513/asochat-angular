@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserService {
-  user: User;
   apiRoot: string;
   results: Object[];
   loading: boolean;
@@ -24,7 +23,6 @@ export class UserService {
     this.apiRoot = '';
     this.results = [];
     this.loading = false;
-    this.user = new User();
   }
 
 
@@ -40,9 +38,9 @@ export class UserService {
 
     // this.apiRoot = this.apiRoot + '?num=' + student_number + 'pass=' + password;
 
-    this.user.state = true;
-    this.user.is_first_login = true;
-    const json_data: string = JSON.stringify(this.user);
+    loginUser.state = true;
+    loginUser.is_first_login = true;
+    const json_data: string = JSON.stringify(loginUser);
     const res_user: User = JSON.parse(json_data);
 
     localStorage.setItem('signed_user', json_data);

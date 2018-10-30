@@ -1,3 +1,21 @@
-<p>
-  event-list works!
-</p>
+<app-header></app-header>
+<div class="container">
+  <div *ngFor="let room of rooms" class="room">
+    <header class="room-header">
+      <h3 class="room-name">{{room.name}}</h3>
+    </header>
+    <div class="room-body">
+      <p>概要: {{room.desc}}</p>
+      <p>参加者数: {{room.participants.length}}</p>
+      <p>ホスト: {{room.creator.name}}</p>
+      <button mat-button (click)="onClick(room)">参加</button>
+    </div>
+  </div>
+<!--
+  <mat-paginator [length]="rooms.length"
+                 [pageIndex]="0"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]" >
+  </mat-paginator>
+-->
+</div>

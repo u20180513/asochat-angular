@@ -32,9 +32,6 @@ export class LoginComponent implements OnInit, OnDestroy {
           this.service.login(this.user);
       }
     }
-  }
-
-  checkData() {
-    return JSON.stringify(this.user);
+    this.service.login(this.user);
   }
 }

@@ -18,14 +18,6 @@ export class HandlenameRegistComponent implements OnInit {
   }
 
   onSubmit() {
-    const user: User = JSON.parse(localStorage.getItem('signed_user'));
-
-    user.name = this.handlename;
-
     this.service.regist_name(this.handlename);
-  }
-
-  checkData() {
-    return localStorage.getItem('signed_user');
   }
 }

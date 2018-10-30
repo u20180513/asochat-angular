@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { OPENROOMLIST } from'./mock-openroomlist';
-
+/**
+ * import { OPENROOMLIST } from'./mock-openroomlist';
+ */
+/**
+ * not push
+ */
 @Component({
   selector: 'app-open-room-list',
   templateUrl: './open-room-list.component.html',
@@ -8,7 +12,7 @@ import { OPENROOMLIST } from'./mock-openroomlist';
 })
 export class OpenRoomListComponent implements OnInit {
 
-  openroomlist = OPENROOMLIST;
+  // openroomlist = OPENROOMLIST;
 
   constructor() { }
 

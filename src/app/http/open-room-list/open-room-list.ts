@@ -4,5 +4,5 @@ export class OpenRoomList {
     genre: string,
     member: number,
     host: string,
-  ){}
+  ) { }
 }

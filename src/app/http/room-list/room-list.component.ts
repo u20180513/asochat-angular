@@ -2,45 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Room } from '../../model/room';
 import { User } from '../../model/user';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export const participants: Array<User> = [
-  new User(10, 100500, 'test', ''),
-  new User(10, 100500, 'test02', ''),
-  new User(10, 100500, 'test03', ''),
-  new User(10, 100500, 'test04', ''),
-  new User(10, 100500, 'test05', ''),
-];
-
-export const rooms: Array<Room> = [
-  new Room(10,
-    new User(10, 100500, 'creator', ''),
-    'test0',
-    'testing0',
-    '',
-    participants
-  ),
-  new Room(10,
-    new User(10, 100500, 'creator', ''),
-    'test1',
-    'testing1',
-    'password1',
-    participants
-  ),
-  new Room(10,
-    new User(10, 100500, 'creator', ''),
-    'test',
-    'testing',
-    'password',
-    participants
-  ),
-  new Room(10,
-    new User(10, 100500, 'creator', ''),
-    'test',
-    'testing',
-    '',
-    participants
-  ),
-];
+import { RoomService } from 'src/app/services/room.service';
 
 export interface Data {
   room: Room;
@@ -58,11 +20,14 @@ export interface Data {
 })
 export class RoomListComponent implements OnInit {
 
-  public rooms = rooms;
+  rooms;
 
   constructor(
     public dialog: MatDialog,
-  ) { }
+    private service: RoomService,
+  ) {
+    this.rooms = service.getList();
+  }
 
   ngOnInit() {
   }
