@@ -22,6 +22,8 @@ import { HandlenameRegistComponent } from './http/handlename-regist/handlename-r
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './http/footer/footer.component';
 import { LogoutComponent } from './http/logout/logout.component';
+import { EventRegistComponent } from './http/event-regist/event-regist.component';
+import { EventDeleteComponent } from './http/event-delete/event-delete.component';
 
 @NgModule({
   imports: [
@@ -49,6 +51,8 @@ import { LogoutComponent } from './http/logout/logout.component';
     FooterComponent,
     LogoutComponent,
     UserListComponent,
+    EventRegistComponent,
+    EventDeleteComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
