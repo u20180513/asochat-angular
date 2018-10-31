@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenRoom } from './openroom';
-import { OPENROOMS } from './mock-OpenRooms';
 
 @Component({
   selector: 'app-http-userscreen',
@@ -17,7 +16,6 @@ export class UserScreenComponent implements OnInit {
     host: 'kohei'
   };
 
-  openrooms = OPENROOMS;
 
   constructor() { }
 

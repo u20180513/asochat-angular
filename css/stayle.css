@@ -1,0 +1,68 @@
+html{
+  width: 100%;
+}
+body{
+  margin: 0px;
+}
+h3{
+  margin: 0px;
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 15px;
+  float: left;
+  width: 50%;
+}
+.user{
+  float: left;
+  color: #fff;
+  width: 50%;
+  align:right;
+}
+h5{
+  margin: 0px;
+}
+.ao{
+  height:40px;
+  background-color: #01227D;
+}
+.ao2{
+  height:10px;
+  background-color: #01227D
+}
+.siro{
+  height: 5px;
+}
+
+.col-sm-9{
+  background-color: #EFFBFB;
+  height: 800px;
+  padding: 0px;
+}
+.col-sm-3{
+  padding-right: 0px;
+}
+
+ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+li{
+  background-color: #CEECF5;
+  padding: 10px;
+
+}
+
+.content{
+  height: 750px;
+}
+.in{
+  background-color: #F7D358;
+  height: 50px;
+  text-align: center;
+}
+.text{
+  background-color: #F7D358;
+  margin-top: 10px;
+  border-radius: 10px;
+}
