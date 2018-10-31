@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenRoom } from './openroom';
-
 @Component({
   selector: 'app-http-userscreen',
   templateUrl: './userscreen.component.html',

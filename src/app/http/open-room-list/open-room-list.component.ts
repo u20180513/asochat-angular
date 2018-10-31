@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-open-room-list',
   templateUrl: './open-room-list.component.html',

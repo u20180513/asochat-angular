@@ -14,25 +14,46 @@ import { EventListAdminComponent } from './http/event-list-admin/event-list-admi
 import { from } from 'rxjs';
 import { OpenRoomListComponent } from './http/open-room-list/open-room-list.component';
 
+import { RoomListComponent, RoomDialogComponent } from './http/room-list/room-list.component';
+import { HeaderComponent } from './http/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HandlenameRegistComponent } from './http/handlename-regist/handlename-regist.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './http/footer/footer.component';
+import { LogoutComponent } from './http/logout/logout.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
     LoginComponent,
     TopComponent,
+    RoomListComponent,
     Error404Component,
     AdminComponent,
     EventListAdminComponent,
     RoomManagementComponent,
     UserListComponent,
     OpenRoomListComponent,
+    HeaderComponent,
+    RoomDialogComponent,
+    HandlenameRegistComponent,
+    FooterComponent,
+    LogoutComponent,
+    UserListComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    RoomDialogComponent,
+  ]
 })
 export class AppModule { }

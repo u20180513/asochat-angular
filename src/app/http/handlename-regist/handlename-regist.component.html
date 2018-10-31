@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container">
+  <form #nameRegist="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">ニックネーム</label>
+      <input required class="" type="text"
+             id="name" 
+             name="name" 
+             placeholder="ニックネームを入力してください。" 
+             minlength="2"
+             maxlength="40"
+             [(ngModel)]="handlename">
+    </div>
+    <button type="submit">登録</button>
+  </form>
+</div>

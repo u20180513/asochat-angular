@@ -1,24 +1,37 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { User } from '../../model/user';
+import { UserService } from 'src/app/services/user.service';
+import { isNullOrUndefined, isNull } from 'util';
+// https://qiita.com/ksh-fthr/items/e43dd37bff2e51e95a59
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: ['']
+  styles: ['input { width: 100%; } ']
 })
-export class LoginComponent implements OnInit {
-  submitted = false;
-  user = new User(10, 'test');
+export class LoginComponent implements OnInit, OnDestroy {
+  user: User = new User();
 
-  constructor() { }
+  constructor(
+    private service: UserService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.submitted = true;
-    alert(this.diagnostic);
+  ngOnDestroy() {
   }
 
-  get diagnostic() { return JSON.stringify(this.user); }
+  onSubmit() {
+    // console.log(JSON.stringify(this.user));
+    if (this.user.num.toString.length === 10) {
+      if (this.user.password.length >= 8
+          && this.user.password.length <= 200) {
+          this.service.login(this.user);
+      }
+    }
+    this.service.login(this.user);
+  }
 }

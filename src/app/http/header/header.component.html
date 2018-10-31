@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+  <div class="navbar-header">
+    <a class="navbar-brand" routerLink="/top">ASO Chat</a>
+    <a class="navbar-brand" *ngIf="!user.state" routerLink="/login">Login</a>
+    <a class="navbar-brand" *ngIf="user.state" routerLink="/logout">Logout</a> 
+    <a class="navbar-brand" routerLink="/rooms">Rooms</a> 
+  </div>
+</div>
+</nav>
