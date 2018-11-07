@@ -1,14 +1,13 @@
+<app-header></app-header>
 <div class="container">
-  <meta charset="utf-8">
-<ul>
-  <li><button routerLink="/top">戻る</button></li>
-
-  <li>
-    {{oroom.RoomName}}
-    {{oroom.genre}}
-    {{oroom.member}}
-    {{oroom.host}}
-  </li>
-
-</ul>
+  <div *ngFor="let oroom of openroom" class="room">
+    <header class="room-header">
+      <h3 class="room-name">{{oroom.RoomName}}</h3>
+    </header>
+    <div class="room-body">
+      <p>概要: {{oroom.genre}}</p>
+      <p>参加者数: {{oroom.member}}</p>
+      <button>参加</button>
+    </div>
+  </div>
 </div>

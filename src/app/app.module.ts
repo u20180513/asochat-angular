@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router';
 import { TopComponent } from './http/top/top.component';
 import { Error404Component } from './http/errors/error404';
 import { AdminComponent } from './http/admin/admin.component';
-import { RoomManagementComponent } from './http/room-management/room-management.component';
 import { UserListComponent } from './http/user-list/user-list.component';
 import { EventListAdminComponent } from './http/event-list-admin/event-list-admin.component';
 import { from } from 'rxjs';
@@ -22,6 +21,8 @@ import { HandlenameRegistComponent } from './http/handlename-regist/handlename-r
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './http/footer/footer.component';
 import { LogoutComponent } from './http/logout/logout.component';
+import { PrivateRoomCreateComponent } from './http/private-room-create/private-room-create.component';
+import { EventListComponent } from './http/event-list/event-list.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,7 @@ import { LogoutComponent } from './http/logout/logout.component';
     Error404Component,
     AdminComponent,
     EventListAdminComponent,
-    RoomManagementComponent,
+    EventListComponent,
     UserListComponent,
     OpenRoomListComponent,
     HeaderComponent,
@@ -49,6 +50,7 @@ import { LogoutComponent } from './http/logout/logout.component';
     FooterComponent,
     LogoutComponent,
     UserListComponent,
+    PrivateRoomCreateComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

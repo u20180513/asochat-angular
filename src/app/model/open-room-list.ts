@@ -3,6 +3,5 @@ export class OpenRoomList {
     RoomName: string,
     genre: string,
     member: number,
-    host: string,
   ) { }
 }

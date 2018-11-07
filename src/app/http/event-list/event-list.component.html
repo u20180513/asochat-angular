@@ -1,21 +1,13 @@
 <app-header></app-header>
 <div class="container">
-  <div *ngFor="let room of rooms" class="room">
+  <div *ngFor="let event of Event" class="room">
     <header class="room-header">
-      <h3 class="room-name">{{room.name}}</h3>
+      <h3 class="room-name">{{event.name}}</h3>
     </header>
     <div class="room-body">
-      <p>概要: {{room.desc}}</p>
-      <p>参加者数: {{room.participants.length}}</p>
-      <p>ホスト: {{room.creator.name}}</p>
-      <button mat-button (click)="onClick(room)">参加</button>
+      <p>開催日:{{event.date}} </p>
+      <p>ホスト:</p>
+      <button >申し込み</button>
     </div>
   </div>
-<!--
-  <mat-paginator [length]="rooms.length"
-                 [pageIndex]="0"
-                 [pageSize]="10"
-                 [pageSizeOptions]="[5, 10, 25, 100]" >
-  </mat-paginator>
--->
 </div>

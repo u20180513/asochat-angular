@@ -5,8 +5,8 @@ import { Error404Component } from '../http/errors/error404';
 import { OpenRoomListComponent} from'../http/open-room-list/open-room-list.component';
 import { AdminComponent} from'../http/admin/admin.component';
 import { EventListAdminComponent} from'../http/event-list-admin/event-list-admin.component';
-import { RoomManagementComponent} from'../http/room-management/room-management.component';
 import { UserListComponent} from'../http/user-list/user-list.component';
+import { PrivateRoomCreateComponent } from'../http/private-room-create/private-room-create.component';
 
 import { RoomListComponent } from '../http/room-list/room-list.component';
 import { AuthGuard } from '../security/auth.guard';
@@ -16,6 +16,7 @@ import { QuestionListComponent } from '../http/question-list/question-list.compo
 import { LogoutComponent } from '../http/logout/logout.component';
 import { HandlenameRegistComponent } from '../http/handlename-regist/handlename-regist.component';
 import { FirstLoginGuard } from '../security/first-login.guard';
+import { from } from 'rxjs';
 
 export const routes: Routes = [
   {
@@ -30,7 +31,7 @@ export const routes: Routes = [
     data: { title: 'top' },
   },
   {
-    path: 'open-room-list',
+    path: 'openrooms',
     component: OpenRoomListComponent,
     data: { title: 'open-room-list' },
   },
@@ -48,11 +49,6 @@ export const routes: Routes = [
     path: 'event-list-admin',
     component: EventListAdminComponent,
     data: { title: 'event-list-admin' },
-  },
-  {
-    path: 'room-management',
-    component: RoomManagementComponent,
-    data: { title: 'room-management' },
   },
   {
     path: 'user-list',
@@ -76,6 +72,16 @@ export const routes: Routes = [
     component: HandlenameRegistComponent,
     data: { title: 'rooms' },
     canActivate: [AuthGuard, FirstLoginGuard],
+  },
+  {
+    path: 'events',
+    component: EventListComponent,
+    data: { title: 'event-list' },
+  },
+  {
+    path: 'private-room-create',
+    component: PrivateRoomCreateComponent,
+    data: { title: 'private-room-create' },
   },
   /*
   {

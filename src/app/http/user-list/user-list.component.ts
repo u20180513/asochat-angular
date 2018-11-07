@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-user-list',
+  selector: 'app-http-user-list',
   templateUrl: './user-list.component.html',
-  styles: ['']
+  styles: ['th,td{border:1px solid }']
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
+  userlist;
+
+
+  constructor(
+    private service: UserService, 
+  ) {
+    this.userlist = service.getUserList();
+   }
 
   ngOnInit() {
   }

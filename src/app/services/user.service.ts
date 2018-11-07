@@ -25,6 +25,12 @@ export class UserService {
     this.loading = false;
   }
 
+  public getUserList() {
+    // GET
+    const userlist: Array<User> = participants;
+    return userlist;
+  }
+
 
 
 
@@ -40,6 +46,7 @@ export class UserService {
 
     loginUser.state = true;
     loginUser.is_first_login = true;
+    loginUser.auth = true;
     const json_data: string = JSON.stringify(loginUser);
     const res_user: User = JSON.parse(json_data);
 
@@ -80,3 +87,11 @@ export class UserService {
     this.router.navigate(['top']);
   }
 }
+
+export const participants: Array<User> = [
+  new User(10, 100500, 'test', ''),
+  new User(10, 100500, 'test02', ''),
+  new User(10, 100500, 'test03', ''),
+  new User(10, 100500, 'test04', ''),
+  new User(10, 100500, 'test05', ''),
+];

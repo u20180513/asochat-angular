@@ -1,3 +1,18 @@
+<app-header></app-header>
 <p>
-  user-list works!
+  ユーザリスト
 </p>
+
+<table>
+  <tr>
+    <th>ユーザ番号</th>
+    <th>学籍番号</th>
+    <th>ユーザ名</th>
+  </tr>
+  <tr *ngFor="let user of userlist" class="users">
+    <td>{{user.id}}</td>
+    <td>{{user.num}}</td>
+    <td>{{user.name}}</td>
+  </tr>
+
+</table>
