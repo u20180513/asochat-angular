@@ -2,3 +2,10 @@ div {
     background-color: blue;
     margin-bottom: 5%;
 }
+li{
+  color: white;
+  width: 100%;
+  background-color: blue;
+  position: fixed;
+  bottom: 0;
+}
