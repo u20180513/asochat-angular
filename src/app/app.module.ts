@@ -24,6 +24,7 @@ import { FooterComponent } from './http/footer/footer.component';
 import { LogoutComponent } from './http/logout/logout.component';
 import { EventRegistComponent } from './http/event-regist/event-regist.component';
 import { EventDeleteComponent } from './http/event-delete/event-delete.component';
+import { UserScreenComponent } from './http/userscreen/userscreen.component';
 
 @NgModule({
   imports: [
@@ -53,6 +54,7 @@ import { EventDeleteComponent } from './http/event-delete/event-delete.component
     UserListComponent,
     EventRegistComponent,
     EventDeleteComponent,
+    UserScreenComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

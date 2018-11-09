@@ -107,5 +107,10 @@ export const routes: Routes = [
     path: '**',
     component: Error404Component,
     data: { title: '404' },
-  }
+  },
+  {
+    path: 'userscreen',
+    component: UserScreenComponent,
+    data: { title: 'userscreen' },
+  },
 ];

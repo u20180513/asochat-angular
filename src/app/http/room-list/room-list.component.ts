@@ -14,7 +14,7 @@ export interface Data {
   styles: [
       '.room {border: 2px double black;}',
       '.room-name { padding-left: 5px; }',
-      '.room-body { padding: 10px; border: 1px solid gray;}',
+      '.room-body { padding: 10px; border: 1px solid gray; }',
       '',
     ],
 })

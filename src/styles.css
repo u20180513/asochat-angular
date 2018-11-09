@@ -4,6 +4,15 @@ body{
   /*background-color: #ffff00*/
 
 }
+.room{
+  border: 1px solid #00BCD4;
+}
+.room-body{
+}
+.room-name{
+  margin: 0px;
+  background-color: #00BCD4;
+}
 p{
   height: 30px;
   width: 100%;
